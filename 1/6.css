@@ -1,0 +1,19 @@
+.st1{
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background:rgb(155, 187, 15);
+}
+
+.st2_button{
+    width: 400px;
+    height: 250px;
+    position: absolute;
+   
+    background: rgb(26, 102, 126);
+    border-radius: 10px;
+}
+

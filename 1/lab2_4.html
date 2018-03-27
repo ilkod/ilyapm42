@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8"/>
+        <title>window/navigation/date/document/history/location</title>
+        <link rel="stylesheet" type="text/css" href="6.css">
+	</head>
+	<body>
+        <div class="st1">
+            <div class="st2">
+					<form action="input5.php">
+							<p><b>Позначте зайве слово у ряду</b></p>
+							<p><input id="1" type="radio" name="option" value="a1">window: open new window<Br>
+							<input id="2" type="radio" name="option" value="a2">location: show info about current location<Br>
+							<input id="3" type="radio" name="option" value="a3">history: click to go to the previous in history page<Br> 
+							<input id="4" type="radio" name="option" value="a4">document: show value of button<Br> 
+                            <input id="5" type="radio" name="option" value="a5">navigator: check if cookies are enable here<br>
+                            <input id="6" type="radio" name="option" value="a6">date: check differece between utc and local time</p>
+							<p><input type="button" value="choose" id="submit1" onclick="A()"></p>
+						   </form>
+
+						   
+            </div>
+        </div>
+
+		<script language="JavaScript">
+		function A(){
+		
+		var radios = document.getElementsByTagName('input');
+		var value;
+		for (var i = 0; i < radios.length; i++) {
+  		  if (radios[i].type === 'radio' && radios[i].checked && radios[i].name === 'option') {
+        	value = radios[i].value;       
+    			}
+		}
+//alert(value)
+
+		switch(value){
+			case "a1":{
+				contentsWindow = window.open("http://t.me/", "contents", "top=100", "left=200", "width=400", height="200","toolbar=no", "status=no");
+				break;
+			}
+            case "a2":{
+				 var x = window.location;
+                 var t = ['Property - Typeof - Value',
+                 'window.location - ' + (typeof x) + ' - ' + x ];
+                for (var prop in x){
+                    t.push(prop + ' - ' + (typeof x[prop]) + ' - ' +  (x[prop] || 'n/a'));
+                }
+                 alert(t.join('\n'));
+				break;
+			}
+            case "a3":{
+			
+                 window.history.back()
+				break;
+			}
+            case "a4":{
+				var a1 = document.getElementById('submit1').value;
+                alert(a1);
+				break;
+			}
+            case "a5":{
+				alert("Cookies Enabled: " + navigator.cookieEnabled)
+				break;
+			}
+            case "a6":{
+                var d = new Date();
+                var n = d.getTimezoneOffset();
+				alert("Time difference between UTC and local time is: " + n + "  minutes." )
+				break;
+			}
+			default:{
+				alert("Зробіть вибір!")
+			}
+		}
+		}
+		
+	
+		</script>
+	</body>
+</html>

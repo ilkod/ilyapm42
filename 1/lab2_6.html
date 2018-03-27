@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8"/>
+        <title>2.6</title>
+        <link rel="stylesheet" type="text/css" href="7.css">
+	</head>
+	<body>
+       
+		        <script language="JavaScript">
+		            k=prompt("Введіть k", "");
+                    k=Number(k);
+                    
+                    var str="";
+                    switch (k){
+                        case 0:{
+                            str="0";
+                            alert("Число: "+String(str));
+                            alert("k-ий елемент: "+String(0));
+                            break;
+                        }
+                        case 1:{
+                            str="0";
+                            alert("Число: "+String(str));
+                            alert("k-ий елемент: "+String(0));
+                            break;
+                        }
+                        case 2:{
+                            str="01";
+                            alert("Число: "+String(str));
+                            alert("k-ий елемент: "+String(1));
+                            break;
+                        }
+                        default:{
+                            var n1=0;
+                            var n2=1;
+                            var n3;
+                            str="01";
+                            for(var i=2; i<=k; ++i){
+                                n3=n1+n2;
+                                str+=String(n3);
+                                n1=n2;
+                                n2=n3;
+                            }
+                            
+                            alert("Число: "+String(str));
+                            alert("k-ий елемент: "+String(str[k]));
+                            break;
+                        }
+                    }
+
+                </script>
+	</body>
+</html>
