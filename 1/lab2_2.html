@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset = "utf-8"/>
+        <link rel="stylesheet" type="text/css" href="2.css">
+		<title>2.2</title>
+	</head>
+	<body>
+        <div class="style1">
+            <div class="style2">
+                
+                <p>Число<input name="number" type="text" maxlength="512" id="numberId" class="searchField"/></p>
+               
+                <p>Степінь<input name="power" type="text" maxlength="512" id="powerId" class="searchField"/></p>
+               
+                <script>
+                        function a(){
+                        var inputNum = parseInt(document.getElementById("numberId").value, 10);
+                        var inputPow = parseInt(document.getElementById("powerId").value, 10);
+                        var res=inputNum;
+                        
+                        for (var j = 1; j <  inputPow; j++) {
+                        res*=inputNum;
+                        }
+                        
+                        
+                        alert(res);
+                        
+                        document.getElementById("numberId").value="";
+                        document.getElementById("powerId").value="";
+}
+                       
+                
+                </script>
+            <br>
+            <input type="button" value="click" name="Підnяти в степінь" OnClick="a();">
+            
+        </div>
+        </div>
+	</body>
+</html>
